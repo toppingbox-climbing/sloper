@@ -1,0 +1,12 @@
+body {
+    font-size: 10px;
+    color: #000000;
+    font-family: "Noto Sans KR", "돋움"; 
+    font: weight 400px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font: "Noto Sans KR";
+  }
+  

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andar membership join page</title>
+  </head>
+
+
+  <body>
+    <form action="join.html" method="post">
+   <h1>회원가입</h1>
+    <p><br>
+    <h3>기본정보</h3><br>
+
+    <p>
+      <span><label for="personal">개인회원</label> <input type="radio" id="personal" name="membership" value="personal" /></span>
+      <span><label for="buisiness">사업자회원</label><input type="radio" id="buisiness" name="membership" value="buisiness" checked /></span>
+      <span><label for="foreigner">외국인회원</label><input type="radio" id="foreigner" name="membership" value="foreigner" checked /></span>
+      <!--id와 라벨은 따로 떨어져 있어도 적용된다.-->
+      <!--default로 체크를 해두고 싶으면 checked 써두면 된다-->
+</p>
+
+    <div>아이디<input type="id" name="id" placeholder="(영문소문자/숫자,4~16자)" /></div>
+    <br><div>
+        비밀번호
+        <input type="password" name="password" placeholder="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)" />
+      </div>
+      <br><div>
+        비밀번호 확인
+        <input type="password" name="password" placeholder="" />
+      </div>
+      <br><div>
+        이름
+        <input type="name" name="" placeholder="" />
+      </div>
+      <br>
+      주소<input type="adress" name="adress" placeholder="" />
+      <span><input type="button" name="post" value="우편번호찾기" /></span>
+      </div>
+      <br><div>
+       
+        <input type="name" name="" placeholder="" />
+      </div>
+      <br><div>
+        휴대전화<select name="" id="">
+          <option value="">010</option>
+          <option value="">011</option>
+          <option value="">016</option>
+          <option value="">017</option>
+          <option value="">018</option>
+        </select>
+        <span><input type="name" name="" placeholder="" /></span><span>&nbsp;<input type="name" name="" placeholder="" /></span>
+        
+      </div>
+      <br><div>
+        이메일 <input type="email" name="email" />
+      </div>
+    </p>
+    <p><br><br>
+        <h3>추가정보</h3><br>
+        <p> 성별
+                <span><label for="male">남자</label> <input type="radio" id="male" name="gender" value="male" /></span>
+                <span><label for="female">여자</label><input type="radio" id="female" name="gender" value="female" checked /></span>
+                <!--id와 라벨은 따로 떨어져 있어도 적용된다.-->
+                <!--default로 체크를 해두고 싶으면 checked 써두면 된다-->
+        </p>
+        생년월일<br>
+          <input type="name" name="" placeholder="" />년
+          <input type="name" name="" placeholder="" />월
+          <input type="name" name="" placeholder="" />일
+        </div><p><br>
+        <h3>전체 동의</h3>
+        <span><input type="checkbox" name="agree" value="바둑" /><label><strong>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의 합니다.</strong> </label> </span>
+        <p>
+        <span><input type="checkbox" name="agree" value="바둑" /><label>[필수]이용약관 동의</label> </span></p>
+        <p>
+          <span><input type="checkbox" name="agree" value="바둑" /><label>[필수]개인정보 수집 및 이용 동의</label> </span></p>
+        </p>
+        <p>
+          <span><input type="checkbox" name="choice" value="바둑" /><label>[선택]SMS(문자,카카오톡 등) 수신을 동의하십니까?</label> </span></p>
+          <p>
+            <span><input type="checkbox" name="choice" value="바둑" /><label>[선택]이메일 수신을 동의하십니까?</label> </span></p>
+          </p>
+          <button>취소</button><button>회원가입</button>
+        </p>
+    </p>
+  </body>
+</html>

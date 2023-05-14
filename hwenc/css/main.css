@@ -1,0 +1,20 @@
+. main-visual video {
+  /* 하나밖에 없기 때문에 굳이 클래스 지정 안해도 되고 그래서 태그 바로 써도 됨 */
+
+  width: 100%; /*100vw; 모니터 넓이만큼 잡아주는 것*/
+  height: 100vh;
+  object-fit: cover; /*cover 채워넣을 수 있을 만큼 채우고 잘라내라*/
+  /*viewport height 보고 있는 디바이스 높이만큼의 길이*/ 
+}
+.business.list{
+    color: #111;
+}
+..business .list li {
+    /* width: 260px; /*calc(25% - 40px); 서로 단위가 달라도 연산을 할 수 있다. 주의 할 점은 무조건 떨어져야한다. 사칙연산 다 됨 */
+        쟝소: 25%;
+    margin: 0 20px;
+}
+.business .list li .img-box{
+    display: none;
+
+}

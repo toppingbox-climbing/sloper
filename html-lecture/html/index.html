@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <form action="join.html" method="get">
+      <!--get은 데이터가 다 뜨기 때문에 비번같은 건 post로 바꿔야한다.-->
+      <!--한 칸 띄우는 건 속성이다. form action. method에는 get과 post 두가지가 있다-->
+      <div>id : <input type="text" name="id" placeholder="아이디를 입력하세요." /></div>
+      <!--input태그에도 닫는 태그가 없음 프리티어 설치했기 때문에 / 가 생김. 안닫히는 태그 뒤에는 자동으로 생기는 것-->
+      <div>
+        password :
+        <input type="password" name="password" placeholder="패스워드를 입력하세요." />
+      </div>
+      <!--name값으로 서버로 전달되는 것-->
+      <div>
+        <span><label for="male">남자</label> <input type="radio" id="male" name="gender" value="male" /></span>
+        <span><label for="female">여자</label><input type="radio" id="female" name="gender" value="female" checked /></span>
+        <!--id와 라벨은 따로 떨어져 있어도 적용된다.-->
+        <!--id와 for 값이 서로 대응한다. id는 여러개 쓰이면 안된다. 그래서 다른 데 붙여도 반응하는것.-->
+        <!--default로 체크를 해두고 싶으면 checked 써두면 된다-->
+      </div>
+      <div>
+        <!--prettier-ignore-->
+        <span><label>바둑 <input type="checkbox" name="hobby" value="바둑" /></label> </span>
+        <!--span태그는 인라인으로 묶는다-->
+        <span><label for="topping">클라이밍</label> <input type="checkbox" name="hobby" value="클라이밍" /></span>
+        <!-- lebel for 말고 그냥 lebel로 항목 이름만 묶어줘도 된다. 근데 여기서 go? 이건 뭐지 -->
+
+        <span><label for="out">산책</label> <input type="checkbox" name="hobby" value="산책" /></span>
+        <span><label for="minton">배트민턴</label> <input type="checkbox" name="hobby" value="바둑" /></span>
+
+        <span><label for="movie">영화</label> <input type="checkbox" name="hobby" value="영화" /></span>
+
+        <span><label for="fishing">낚시</label><input type="checkbox" name="hobby" value="낚시" /></span>
+        <!--오타 중요하다. 잘 찾아보자. label을 lebel로 쓰지 말고-->
+      </div>
+      <div>
+        <input type="email" name="email" />
+      </div>
+      <div>
+        <input type="date" />
+      </div>
+      <div>
+        <input type="file" />
+      </div>
+      <div>
+        <textarea name="" id="" cols="30" row="10"></textarea>
+        <!--textarea는 블로그처럼 여러줄 길게 쓰는 창-->
+      </div>
+      <div>
+        <select name="" id="">
+          <option value="">010</option>
+          <option value="">011</option>
+          <option value="">016</option>
+          <option value="">017</option>
+          <option value="">01</option>
+        </select>
+      </div>
+
+      <!--name이 같으면 선택은 하나만 된다.-->
+      <button>join</button>
+    </form>
+  </body>
+</html>

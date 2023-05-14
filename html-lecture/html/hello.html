@@ -1,0 +1,45 @@
+//규칙이 있다. //마킹한 모든것들을 하나의 태그라고 한다. // 모든 태그는 html안에 있어야 한다. 최 상위는 html html // 그 다음에는 head(는 화면에 노출
+안되는 것. 문서가 어떤 내용을 가지고 있다 등등) 가 있어야하고 그 다음에는 body(화면 출력)
+
+<!DOCTYPE html> html도 버전이 있다. 지금은 전부다 5를 쓴다.
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEllo html</title>
+    타이틀이 아이콘이랑 이름 브라우저에서 보이는것
+  </head>
+  <!--bloc 태그-->
+  <h1>Hello Html</h1>
+  <h1>Hello Html</h1>
+  <h1>Hello Html</h1>
+  <h5>Hello Html</h5>
+  <h6>Hello Html</h6>
+  제목으로 쓸 수 있는게 6단계까지 있는데, 4 이상으로는 안가는 게 좋음. 너무 쪼개짐 작아짐
+  <a href="http://www.daum.net/" target="_blank">다음</a>
+  속성은 무조건 한칸을 띄워야 됨. 붙이면 태그가 됨. href이런 건 정해진 것 속성은 항상 다르게 세팅할 수 있다. 게터 세터 타겟을 블랭크로 하면 탭 새로
+  만든다.
+  <a href="http://www.naver.com">네이버</a>
+  <a href="http://wwww.fishing.com">국세청 환급</a>
+  <a href="profile.html">profile</a>
+
+  <p>본문을 마킹하는 태그입니다. p</p>
+  <p>본문을 마킹하는 태그입니다. p</p>
+  <!--alrt shift + 방향키 하면 복사가 됨 그냥
+    태그의 속성. 옆으로 가는 게 있고 밑으로 떨어지는 게 있고. p는 밑으로 떨어진다. 줄이 바뀐다는 말.
+   태그의 보여지는 속성에 따라 block형 태그가 있고 아래로 떨어지는.-->
+  <!--inline형 태그가 있다. 옆으로. 커맨드 슬러시 하면 주석이 된다. 전부 마킹 한 다음에 -->
+  이게 바로 주석 처리 코드 상에서는 보이는데 화면에서는 안보인다. 몇몇 태그들은 닫는 태그들이 없다. 대표적인게 이미지 . 이미지는 자체가 표시되는 것
+  이기 때문에 닫아 줄 필요가 없다. 로고가 잘못됐을 때 alt를 쓴다? 원래는
+  <img
+    src="http://www.gith.co.kr/include/header/force/img/top_logo.png"
+    alt="여기는 이미지 설명을 하는 것. 시각장애인 등을 위해 텍스트로 읽어주는 역할을 한다."
+  />
+  <a href="http://www.gith.co.kr/" target="_blank">
+    <img src="../images/top_logo.png" alt="글로벌 아이티 로고" /> 현재 폴더는 점 하나 슬래쉬, 한단계 위는 점 두개 슬래쉬, 절대 폴더는 안쓰는거
+  </a>
+  인터넷 뿐만 아니라 여기 저장돼 있는 이미지 경로를 직접 써주어도 이미지 불러오기 가능. 맥 경로 빨리 어떻게 표기하는지 알아볼것. 나를 기준으로.
+  image폴더가 같은 폴더 내에 있으니까 이미지 폴더 밑에 이런식으로"> head를 날리면 껍데기를 제외한 내용만 볼 수 있음 head안에 css 디자인 레이아웃
+  이런게 들어가나봐 그래서 그거 싹 지우면 걍 텍스트만 나옴 디자인적인 ㄷ움직이는 것 등을 가능하게 해주는 게 css 레이아웃
+</html>
