@@ -1,0 +1,144 @@
+
+.header {
+    position:absolute;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255,255,255,0.5); /*0을 쓰면 투명, 1을 쓰면 불투명 , 0,5는 반투명*/
+    overflow: hidden;
+    z-index:99; /*손가락으로 바뀜*/ 
+    /* border-bottom: 1px solid #ccc; */
+}
+    /* left:100px;
+    top:300px; */
+
+.header after{ /*쓸데없는 태그 만들기 싫어서 가상 태그 만들어준 것. 왜냐, 태그가 있어야 css 적용이 되는데 굳이 선 하나 넣겠다고 태그를 쓰기 싫은거지*/
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    position: absolute;
+    top: 100px;
+
+}
+
+.header:hover { /*편법???*/
+    height: 350px;
+    background-color:rgba(255,255,255,1);
+    transition: all 0.5s;
+
+}
+
+.header:hover {
+    color: #111;
+
+}
+
+.header .logo {
+    position: absolute; 
+    height: 100px;
+    display: flex;
+    align-itmes: center;
+    outline: 1px solid #f00;
+    padding-left: 50px;
+    padding-right: 50px;
+    }
+
+.list.depth01:hover {
+    color: #f60;
+}
+
+.header { /* <!--영역을 한정시켜 주는것. 로고--> */
+    display: flex; /*li들이 6개 있는데 이게 옆으로 나란히 된 것. flex를 쓰면 축(가로 main axis, 세로 cross axis)이 생긴다. */
+    justify-content: center; /*메인에 대한 축을 결정하는 것. 정렬 방향을 결정하는 것. default는 start. flex-start,center,end 사용 가능 . space-between, around, evenly 이븐리는 간격 일정 비트윈은 사이에 공간 두기 하지만 처음 마지막은 공간 삭제해버리기. 이게 어라운드랑 차이점  어라운드는 찾아보자 */
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    color: #ffffff /*fff로 쓸 수 있음 생략 가능*/
+
+}
+.list .depth01{
+    font-size: 20px;
+    font-weight: 500;
+    /* font-weight: 500;
+    display: block;
+    height: 100px; /*높이를 주고 싶으면 inline으로 안돼서 display형태로 바꿔야함
+    line-height: 100px; 두줄일때 쓰면 안됨 */
+    
+    height:100px;
+    width: 200px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: left 50px; /*안쪽에 여백을 만드는 것. margin을 써도 되는데, 마진은 링크 영역이 줄어든다. 패딩은 링크 면적이 그대로 남아있음. */
+    padding :right 50px;
+    outline: 1px solid #ff0000; 
+}
+
+.list.depth02{ 
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.list.depth02 li a {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.25s ease; /*linear를 쓰면 똑같은 속도로 움직임*/
+
+}
+
+.header :after {
+    content:"";
+    display:block;
+    width:100%;
+    height:10px;
+    background-color: #ccc;
+    position: absolute;
+}
+
+.list.depth02 li a:hover{
+    color: #f60;
+}
+
+
+
+
+.popup{
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    left: 100px;
+    top: 100px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1)
+}
+
+.popup .content {
+    width: 400px; 
+    height: 400px;
+    background-color: #12c9f2;
+
+}
+
+
+
+.list {
+    display: flex;
+    li {
+        .depth01{
+                font-size:20px;
+                font-weight:500; /*css는 이렇게 안됨. css는 하나씩 써줘야함 그래서 편하게 쓰자고 나온개ㅔ sass / scss 임 */
+        }
+        .depth02{
+
+        }
+    }
+}

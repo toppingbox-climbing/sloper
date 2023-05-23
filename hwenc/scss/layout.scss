@@ -1,0 +1,12 @@
+.popup {
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  left: 100px;
+  top: 100px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+// 브라우저가 css만 인식하기때문에 scss같은 건 프로그램을 설치해서 바꿔줘야한다.
+// 익스텐션 -> 사스

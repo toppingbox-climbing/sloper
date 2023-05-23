@@ -1,0 +1,132 @@
+@import "vars";
+
+.main-visual {
+    iframe {
+        width: 100%;
+        aspect-ratio: 1 / 0.5625;
+
+        .slogan {
+            position: absolute;
+            color: #fff;
+            font-size: $h1 * 1.25; //25% 확대 시키는 것
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            width:100%; // 넓이가 넓어야지만 ㄴ글자가 가운데로 갈 수 있기 때문?
+            line-height: 1.5;
+            font-weight: 700;
+        .word{
+            overflow:hidden;
+        }
+        }
+    }
+}
+.banner{
+    padding: 150px 0;
+    //margin-left:300px;
+    overflow-x: hidden;
+    .mask {
+        margin-top: 120px;
+        //overflow: hidden;
+        position: relative;
+        border: 1px solid #f00;
+        //width: 100vw;
+        .list{
+            li{
+                width: 1160px;
+                p{
+                    margin-top: 30px;
+                    font-size: $h3;
+                    .category{
+                        padding: 10px 20px;
+                        background-color: #111;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        button{
+            position: absolute;
+            background: none;
+            top: 40%;
+            border: 2px sold #fff;
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            z-index: 2;
+            .material-icons{
+                font-size: 48px;
+                color:#fff;
+            }
+            .&btn-next{
+                right: 0;
+            }
+            .pagination{
+                margin-top: 50px;
+                .swiper-pagination-bullet{
+                    width: 12px;
+                    height: 12px;
+                    opacity: 1;
+                    border:2px solid $main-color;
+                    background: none;
+                    border-radius: 100px;
+                    transition: all 0.25s ease;
+                    &-active {
+                        width: 50px;
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+.partner{
+    padding: 150px 0;
+    background-color: $bg-color;
+    overflow-x:hidden;
+    .brand {
+        margin-top:50px;
+        // width: 100vw;
+        ul{
+            // display:flex;
+            // animation:  brand-motion 10s linear infinite ;
+            transition-timing-function: linear;
+            li{
+                // padding: 20px;
+                width:auto;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.title-box {
+    h2 {
+        font-size: $h1;
+        line-height: 1.25;
+        .mini {
+            color:$main-color;
+            display: block;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    }
+    p  {
+       font-size: $h3;
+    }
+}
+
+
+@keyframes brand-motion{
+    0%{
+        transform: translateX(0);
+
+
+    }
+    100% {
+        transfrom translateX();
+
+    }
+}

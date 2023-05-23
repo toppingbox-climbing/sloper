@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div>
+    <div class="biman">
+        <div class="clac"></div>
+    <label><span>키</span><input type="text" id="height" class="height" placeholder="키를 입력해 주세요 ex) 180" /></label>
+    <label><span>몸무게</span><input type="text" id="weight"class="weight" placeholder="몸무게를 입력해 주세요 ex) 90"/></label>
+    <button class="btn-calc">측정하기</button>
+    <button class="btn-reset">초기화</button>
+</div>
+<div class="result"></div>
+</div>
+<script>
+    const height = document.querySelector("#height"); // id적용할때 # 쓰기
+    const weight = document.querySelector("#weight");
+    const btnCalc = document.querySelector(".btn-calc");
+    const result = document.querySelector(".result");
+    btnCalc.addEventListener("click", function(){
+        //console.log("click");
+        //console.log(height.value);
+        const heightValue = height.value/100;
+        const weightValue = weight.value;
+        const resultValue = weightValue / (heightValue*heightValue);
+        if(resultValue > 18.5 && resultValue < 23.5) {
+            result.textContent = resultValue+"/"+"정상입니다.";
+        } else if (resultValue > 23.5 && resultValue <25){
+            result.textContent = resultValue+"/"+"과체중입니다.";
+        } else if (resultValue >= 25 && resultValue < 30) {
+            result.textContent = resultValue + "/" + "경도비만입니다.";
+        } else if (resultValue >= 30) {
+            result.textContent = resultValue + "/" + "중증비만입니다.";
+        }
+    });
+    btnReset.addEvenListener("click",function () {
+        height.value = "";
+        weight.value = "";
+        result.textContent = "";
+
+    });
+
+    //value값은 스트링이다. 근데 연산이 된다. 자바스크립트에서는. 그래서 자바 하는 사람들이 깜짝깜짝 놀랜다고
+    //querySelector
+    //html이랑 자바스크립트는 완전 다른 것 
+    //돔 중에 제일 위에 있는 게 도큐멘터리
+    //
+</script>
+</body>
+</html>

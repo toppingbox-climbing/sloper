@@ -1,0 +1,59 @@
+@import "vars";
+
+//absolute나 fixed를 쓸 땐 넓이 지정을 해야 한다.
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%; //넓혀줘야지만 너비를 가진다.
+
+  transition: all 0.5s ease;
+
+  .logo {
+    height: 80px;
+    padding: 0 50px;
+
+    img {
+      height: 40px;
+      top: 20px;
+      position: absolute;
+      opacity: 0;
+      transition: all 0.5s ease;
+      &.white {
+        opacity: 1;
+      }
+    }
+  }
+  &.on {
+    color: #111;
+    background-color: #fff;
+    box-shadow: 0 10px 10px rbga(0,0,0,0.15);
+    .logo {
+      img {
+        &.white {
+          opacity: 0;
+        }
+        &.black {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.gnb {
+  .list {
+    display: flex;
+    li {
+      a {
+        display: flex;
+        height: 80px; //logo size때문에 높이가 80이라고 가운데로 자리잡고 이런 건 없다.
+        padding: 80px;
+        font-size: $h4;
+        font-weight: 500;
+        box-sizing: border-box; //content-box는 디폴트를 높이만 잡는다. 근데 border-box를 잡으면 높이에 모든 걸 다 때려 넣는다. 마진 빼고. 보더와 패딩까지. 보더와 패딩까지 다 높이에 포함하고 싶으면 border-box사용
+      }
+    }
+  }
+}
