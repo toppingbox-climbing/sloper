@@ -1,0 +1,63 @@
+<html>
+
+후버? list. list> hover 
+솔리드 solid
+보더 바텀 border-bottom
+리스트 .list
+뎁스 depth02
+텍스트 어라인 센터 text-align: center;
+패딩 paddint-top 10px;
+transition: all 0.25s ease;
+align-items: center;
+justify-content: center;
+display: flex;
+
+
+라인 그리고 있음 
+한화 주황색 라인
+<a href ="" class=depth01" >안에다가 
+    <div>-----------------</div>
+    모든 태그 앞 뒤에는 태그를 쓸 수 있다? 내용이 없어도 
+    나타내기 위해서 
+    pseudo element 슈도 엘리먼트 가상의 생성 
+    뒤에 만들거면 before, 앞에 만들거면 after
+
+    .list> li .depth01{
+        position: relative;
+    }
+
+    .list> li.depth01:after {
+        content:"내용을 넣어야지만 화면에 보여진다.이게 없으면 아무것도 안된다.";
+        
+        하지만 지금은 글자가 필요 없으니까 공백으로 둔다
+
+        즉, content: "";
+        그리고 넓이를
+        width: 100%;
+        height: 3px;
+        background-color: #f60;
+        position: absolute;를 주는 순간 depth01을 신경 안쓰는것 absolute를 쓰는 순간 높이는 상관 없는데 너비에 대한 퍼센트 기준을 뎁스 01로 잡아달라 이거????
+        left: 0;
+        bottom: -2px;
+        transform: scaleX(0); 0부터 1사이를 
+        퍼센트는 항상 기준이 있어야함
+
+
+        부모에 포지션을 주지 않으면 그 상위 기준을 찾아 계속 올라감
+        렐렁티브는 지금 자기가 있는 시점을 기준으로 하기 때문에 
+        기준을 잡아줘야함
+
+
+        .list >li:hover .depth01 {
+            color: #f60;
+
+            /*border-bottom: 2px solid #f60; */
+        }
+        .list > li:hover. depth01: after {
+            transform: scaleX(1);
+        }
+
+        z-index 는 무조건 position: absolute; (absolute;아니어도 상관 없고 relative fixed 등등 아무튼 포지션이 꼭 있어야함)
+    }
+
+</html>

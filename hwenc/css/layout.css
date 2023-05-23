@@ -106,3 +106,23 @@
 .list.depth02 li a:hover{
     color: #f60;
 }
+
+
+
+
+.popup{
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    left: 100px;
+    top: 100px;
+    box-shadow: 10px 10px 10px 
+}
+
+.popup. content {
+    width: 400px; 
+    height: 400px;
+    background-color: #12c9f2;
+
+}
