@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins"; //이걸 불러와야 에프터 아이콘을 쓸 수 있음. &:after
 
 //absolute나 fixed를 쓸 땐 넓이 지정을 해야 한다.
 
@@ -57,3 +58,114 @@
     }
   }
 }
+.footer{
+  background-color: #111;
+  color:rgba(255,255,255,0.75);
+  padding: 150px 0;
+  .upper{
+    display:flex;
+    //align-items: start; //자기 높이만 가지는 것. 높이를 끼워 맞추지 않고 자기 높이만 가짐. align-items의 기본값은 stretch 다른거랑 높이 맞추는거임. 
+    .menu-box {
+      width:50%;
+      .list{
+        display:flex;
+        flex-wrap: wrap; //줄바꿈을 위에 덮어씌우는 것.
+        > li{
+          width:50%;
+          margin-bottom: 50px;
+          &:nth-child(1){
+            order:1;
+          }
+          &:nth-child(2){
+            order:3;
+          }
+          &:nth-child(3){
+            order:2;
+          }
+          &:nth-child(4){
+            order:4;
+          }
+          &:nth-child(5){
+            order:5;
+          }
+        }
+        .depth01{
+          font-size: $h1;
+          font-weight: 700;
+          // margin-bottom: 30px;
+          //depth01은 a태그라서 안먹는다. 위아래가
+
+        }
+        &:after{
+          @include icon("\f1df");
+        }
+        .depth02{
+          margin-top:20px;
+          li {
+            // width: 50%;
+            // margin-bottom: 50px;
+            a{ //a는 Inline이라서 위아래 ㅇㅇ 좌우는 잘 안먹는다
+              font-size: $h4;
+              padding:10px 0;
+              display: block;  //padding이 안먹어서. block처리 
+              //형태는 인라인 띄고 있지만 블록의 기능 inline-block;
+              //인라인. 위아래 처리 안되고 넓이 처리도 안됨.
+              //a, span, strong, em, input, 
+
+            }
+          }
+        }
+      }
+    }
+    .inquiry{
+      background-color:#222;
+      // width: 50%;  .flex-grow때문에 쓸 필요 없음.
+      flex-grow: 1; //여백이 얼만큼 남아있는지 모르는데, 다 가져가고 싶다. 여백을 나눠 가지는 것. inquiry가 가져감
+      // 혼자 다 가져가는 거기 때문에 여기서는 1을 쓰든, 100을 쓰든 상관 없음. 결국 비율의 문제
+      //ex. menu-box에 ㅇ플렉스 그로우 1 쓰고 인쿼리에 플렉스 그로우 2 쓰면 1/3, 2/3씩 가져가게 되는 것.
+      padding: 80px;
+      font-size: $h4;
+      position: relative;
+      .main {
+        font-size: $h2; 
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .more{
+        position: absolute;
+        right: 80px;
+        bottom: 80px;
+      }
+    }
+  }
+  .lower{
+    border-top: 1px solid rgba(255,255,255,0.75);
+    padding-top:100px;
+    margin-top:100px;
+    display: flex;
+    justify-content: space-between;
+
+    adress{
+      font-family: "Noto Sans KR";
+      line-height: 2.5;
+      .info-box{
+        display:flex;
+        margin: 10px 0;
+      }
+      dl {
+        display:flex;
+        margin-right:20px;
+      }
+    }
+    .copyright{
+      font-size:14px;
+    }
+  }
+}
+
+
+
+
+
+
+

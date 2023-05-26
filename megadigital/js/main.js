@@ -1,4 +1,5 @@
 Splitting();
+AOS.init();
 
 const header = document.querySelector(".header");
 console.log(header);
@@ -34,3 +35,12 @@ window.addEventListener("scroll", () => {
 //window가 자바 스크립트의 가장 최상위 //사용자가 일으키는 이벤트를 매개변수로 받을 수 있어야 한다. 윈도우는 전체를 가리키는 것. 이벤트에 대한 정보가 필요하다. 매개변수를 설정한다. 내 맘대로 설정해도 됨. 여기서는 e, 이벤트 객체, 매개변수로 받을 수 있다. 스크롤의 높이값, 위치값을 알아야 하기 때문에.
 
 //scrollY가 위치값 잡는 것임
+
+
+new Swiper(".recruit .txt-box .rolling"); {
+  direction: "vertical",
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+});

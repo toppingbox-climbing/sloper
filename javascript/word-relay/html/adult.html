@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label><span>AGE</span><input type="text" class="user-age" /></label>
+        <button class="btn-adult">성인인증</button>
+    </form>
+    <script>
+        const btnAdult = document.querySelector(".btn-adult");
+        const userAge = document.querySelector(".user-age");
+        btnAdult.addEventListener("click",(e)=> {
+            // 문자를 숫자로 바꿔주는 것. '20'이 아니고 "20"으로 바꾸는 것 parseInt()
+            const age = oarseInt(userAge.value);
+            if(age>20) {
+                e.preventDefault();
+                console.log(age + 10);
+                alert("성인입니다.");
+                location.href="http://wwww.daum.net/";
+            }
+        })
+    </script>
+    <!-- //20세 이상이면 daum으로 넘기기 -->
+</body>
+</html>

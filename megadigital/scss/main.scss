@@ -1,132 +1,462 @@
+// @import "vars";
+
+// .main-visual {
+//     iframe {
+//         width: 100%;
+//         aspect-ratio: 1 / 0.5625;
+
+//         .slogan {
+//             position: absolute;
+//             color: #fff;
+//             font-size: $h1 * 1.25; //25% 확대 시키는 것
+//             top: 50%;
+//             transform: translateY(-50%);
+//             text-align: center;
+//             width:100%; // 넓이가 넓어야지만 ㄴ글자가 가운데로 갈 수 있기 때문?
+//             line-height: 1.5;
+//             font-weight: 700;
+//         .word{
+//             overflow:hidden;
+//         }
+//         }
+//     }
+// }
+// .banner{
+//     padding: 150px 0;
+//     //margin-left:300px;
+//     overflow-x: hidden;
+//     .mask {
+//         margin-top: 120px;
+//         //overflow: hidden;
+//         position: relative;
+//         border: 1px solid #f00;
+//         //width: 100vw;
+//         .list{
+//             li{
+//                 width: 1160px;
+//                 p{
+//                     margin-top: 30px;
+//                     font-size: $h3;
+//                     .category{
+//                         padding: 10px 20px;
+//                         background-color: #111;
+//                         color: #fff;
+//                     }
+//                 }
+//             }
+//         }
+//         button{
+//             position: absolute;
+//             background: none;
+//             top: 40%;
+//             border: 2px sold #fff;
+//             border-radius: 100%;
+//             width: 60px;
+//             height: 60px;
+//             z-index: 2;
+//             .material-icons{
+//                 font-size: 48px;
+//                 color:#fff;
+//             }
+//             .&btn-next{
+//                 right: 0;
+//             }
+//             .pagination{
+//                 margin-top: 50px;
+//                 .swiper-pagination-bullet{
+//                     width: 12px;
+//                     height: 12px;
+//                     opacity: 1;
+//                     border:2px solid $main-color;
+//                     background: none;
+//                     border-radius: 100px;
+//                     transition: all 0.25s ease;
+//                     &-active {
+//                         width: 50px;
+//                         background-color: $main-color;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+// .partner{
+//     padding: 150px 0;
+//     background-color: $bg-color;
+//     overflow-x:hidden;
+//     .brand {
+//         margin-top:50px;
+//         // width: 100vw;
+//         ul{
+//             // display:flex;
+//             // animation:  brand-motion 10s linear infinite ;
+//             transition-timing-function: linear;
+//             li{
+//                 // padding: 20px;
+//                 width:auto;
+//                 display:flex;
+//                 justify-content: center;
+//                 align-items: center;
+//             }
+//         }
+//     }
+// }
+// .title-box {
+//     h2 {
+//         font-size: $h1;
+//         line-height: 1.25;
+//         .mini {
+//             color:$main-color;
+//             display: block;
+//             font-size: 18px;
+//             margin-bottom: 20px;
+//         }
+//     }
+//     p  {
+//        font-size: $h3;
+//     }
+// }
+
+
+// @keyframes brand-motion{
+//     0%{
+//         transform: translateX(0);
+
+
+//     }
+//     100% {
+//         transfrom translateX();
+
+//     }
+// }
+
+
+
+
+
+
 @import "vars";
-
+@import "minxins";
 .main-visual {
-    iframe {
-        width: 100%;
-        aspect-ratio: 1 / 0.5625;
-
-        .slogan {
-            position: absolute;
+  iframe {
+    width: 100%;
+    aspect-ratio: 1 / 0.5625;
+    //height: 100vh;
+    //object-fit: cover; //img,video
+  }
+  .slogan {
+    position: absolute;
+    color: #fff;
+    font-size: $h1 * 1.25;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    line-height: 1.5;
+    font-weight: 700;
+    .word {
+      overflow: hidden;
+    }
+  }
+}
+.banner {
+  padding: 150px 0;
+  overflow-x: hidden;
+  .mask {
+    margin-top: 120px;
+    position: relative;
+    //border: 1px solid #f00;
+    .list {
+      li {
+        width: 1160px;
+        p {
+          margin-top: 30px;
+          font-size: $h3;
+          .category {
+            padding: 10px 20px;
+            background-color: #111;
             color: #fff;
-            font-size: $h1 * 1.25; //25% 확대 시키는 것
-            top: 50%;
-            transform: translateY(-50%);
-            text-align: center;
-            width:100%; // 넓이가 넓어야지만 ㄴ글자가 가운데로 갈 수 있기 때문?
-            line-height: 1.5;
-            font-weight: 700;
-        .word{
-            overflow:hidden;
+          }
         }
-        }
+      }
     }
+    button {
+      position: absolute;
+      background: none;
+      top: 40%;
+      border: 2px solid #fff;
+      border-radius: 100%;
+      width: 60px;
+      height: 60px;
+      z-index: 2;
+      cursor: pointer;
+      .material-icons {
+        font-size: 48px;
+        color: #fff;
+      }
+      &.btn-next {
+        right: 270px; // 1430 - 1160
+      }
+    }
+    .pagination {
+      margin-top: 50px;
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        border: 3px solid $main-color;
+        background: none;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+        &-active {
+          width: 50px;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
 }
-.banner{
-    padding: 150px 0;
-    //margin-left:300px;
-    overflow-x: hidden;
-    .mask {
-        margin-top: 120px;
-        //overflow: hidden;
-        position: relative;
-        border: 1px solid #f00;
-        //width: 100vw;
-        .list{
-            li{
-                width: 1160px;
-                p{
-                    margin-top: 30px;
-                    font-size: $h3;
-                    .category{
-                        padding: 10px 20px;
-                        background-color: #111;
-                        color: #fff;
-                    }
-                }
-            }
-        }
-        button{
-            position: absolute;
-            background: none;
-            top: 40%;
-            border: 2px sold #fff;
-            border-radius: 100%;
-            width: 60px;
-            height: 60px;
-            z-index: 2;
-            .material-icons{
-                font-size: 48px;
-                color:#fff;
-            }
-            .&btn-next{
-                right: 0;
-            }
-            .pagination{
-                margin-top: 50px;
-                .swiper-pagination-bullet{
-                    width: 12px;
-                    height: 12px;
-                    opacity: 1;
-                    border:2px solid $main-color;
-                    background: none;
-                    border-radius: 100px;
-                    transition: all 0.25s ease;
-                    &-active {
-                        width: 50px;
-                        background-color: $main-color;
-                    }
-                }
-            }
-        }
+.partner {
+  padding: 150px 0;
+  background-color: $bg-color;
+  overflow-x: hidden;
+  .brand {
+    margin-top: 50px;
+    ul {
+      //display: flex;
+      //animation: brand-motion 10s linear infinite;
+      transition-timing-function: linear;
+      li {
+        //padding: 20px 40px;
+        width: auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
+  
+  
+  }
 
-}
-.partner{
-    padding: 150px 0;
-    background-color: $bg-color;
-    overflow-x:hidden;
-    .brand {
-        margin-top:50px;
-        // width: 100vw;
-        ul{
-            // display:flex;
-            // animation:  brand-motion 10s linear infinite ;
-            transition-timing-function: linear;
-            li{
-                // padding: 20px;
-                width:auto;
-                display:flex;
-                justify-content: center;
-                align-items: center;
-            }
+.effect{
+  // width: 1430px; //<!--영역이 줄어든다-->
+  // margin-left: auto; //<!--정해져있지않다 왜냐 모니터 사이즈가 천차만별이라--> 
+  // margin-right: auto; //넓이의 마진 레프트 라이트를 오토 처리 하면 남아있는 여백의 절반만큼 나눠가짐. 정 중앙에 온다는 소리임
+  // border: 1px solid #f00;
+  //padding은 내 몸을 일부이다.
+  // padding-top:150px;
+  // padding-bottom:150px;
+  //refactoring - 처음부터 완벽하게 짤 수 없기 때문에 , 처음에는 윤곽만 잡아놓고 점점 디테일하게 다듬어 나가는 것 . 다시 가공하는 과정을 리팩토링이라고함. 변수가 중복되거나 하는 것들, 최적화 과정을 거치는 것.
+  //겹친다는 개념이 나오면 둘 중 하나는 absolute처리 해야한다.
+  //누구를 absolute로 잡을 지, 전체를 absolute를 잡을 지 결정해야함.
+  padding:150px 0;
+  position:relative;
+  .title-box{
+    color:#fff;
+  .panner{
+    ul{
+      display: flex;
+      li{
+        width: 24%; //1%의 여백을 위해 25 아니고 24. 근데 3등분 해야하는데 이럴때, flex-grow
+        //flex-grow: 1; //여백을 니가 알아서 비율대로 나눠가져라 이거임 여백을 똑같이 ? 아근데 여기서는 flex-grow 필요 없음.
+        justify-content: space-between;
+        a:hover{
+          img {
+            transform: scale(1.25); //1을 100%로 보는 것
+          }
         }
+        .img-box {
+          over-flow: hidden; 
+        }
+        //border: 1px solid #fff; 
+        img {
+          width: 100%; 
+          //vertical-align: top;
+          transition: all 0.25s ease; //minute seconds, 250ms = 0.25s 
+          aspect-ratio: 1/1.25;
+          //height: 
+          //비율로 지정할거면 aspect-ratio  넓이 1에 대해 높이 비율로 지정하겠다 
+        }
+      }
     }
+  }
+  }
+  //margin은 내 것이 아니다. 
+  // background-color: rgb(2, 146, 134);
+  // 제일 바깥에 있는 애가 영역을 지정해버리면 가득 채워버릴 수가 없다. 영역을 지정하지 않으면 좌우 정렬은 안되지만 배경색은 다 채울 수 있고, 대신에 영역을 만들면 배경색을 다 채울 수 없다. 컨텐츠를 가운데 보낼 수는 있다. 동시에 안됨.
+  // 이럴 땐 태그를 한번 더 싸야됨.
+  // effect에 넓이를 주지 말자. 넓이를 주면 색을 가득 채울 수가 없으니.
+
+  .detail{
+    .material-icons{
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+  }
+  .bg{ //계층 구조 필요하면 태그 안에 바로 쓸 수 있음.
+    position: absolute;//내맘대로 영역 지정 가능
+    left:0;
+    top:0; //css는 늘 위에서 아래로
+    width:100%;
+    //iframe은 object 핏이 없다?
+    //넓이에 대한 높이 지정 할 수 있다. 비율
+    aspect-ratio: 1/ 0.5625;
+    z-index: -1; 
+    //emmet 
+  } 
+}
+.news {
+  //width: 100%;
+  padding: 150px 0px;
+.title-box {
+  display: flex;
+  align-items:end;
+  margin-bottom: 80px; //margin병합현상. 위아래 마진이 겹치면 큰거 하나만 먹는다. 좌우 마진은 둘 다 먹는다.
+  h2{
+    margin-bottom: 0;
+  }
+  .detail{
+    .material-icons {
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-bottom: 6px;
+    // font-size: $h4;
+    }
+  }
+  }
+  .pannel {
+    margin-top: 50px;
+    ul {
+      display: flex; //옆으로 나란히 보내야 할 것 같으면 flex 기법
+      justify-content:space-between;
+      
+      gap:0 20px; //gap은 반드시 좌우에 뭐가 있을 때에만 생김 즉 처음과 마지막엔 따로 생기지 않음
+                  //margin과 gap의 차이는 좌우 인접 요소가 있을때 gap이 생긴다. 
+                  //margin은 일단 전부 다 만든다. 
+      li {
+        width: 33.33%;
+        //margin-left:20px; //gap 대신 마진을 줄 경우 여백이 생기지 않는 이유: 플렉스는 무조건 옆으로 보내야함. 
+                          //margin은 자식한테 주는것. 근데 정해져있으니까 5개 플렉스 할 경우 20씩 주면 100이 넘어가고. 그래서 2개밖에 안됨
+          img{
+            width:100%;
+          }
+        }
+        .txt-box{
+          h3 {
+            margin: 20px 0 30px;
+            font-size: $h3;
+            @inclube ellipsis();
+            // white-space: nowrap; //화이트스페이스 안쓰겠다? 노랩; 싸지 않겠다. 원래 디폴트는 랩
+            // overflow: hidden;
+            // //width: 400px;
+            // text-overflow: ellipsis;
+          }
+        p {
+
+          @include multiEllipsis (2, 2); line height 2줄짜리 인데 줄간격이 2 라고? 디폴트는 3이니까 3줄이면 그냥 ()만 해도 됨
+          // line-height: 1.5; //css line-height는 무조건 가운데가 기준. 글자의 1.5배
+          // height: 4.5em; //height는 무조건 단위를 가지고 있어야 한다. p태그의 높이
+          //                //em은 글자 크기를 기준으로 한다. 부모의 글자 크기를 기준으로 한다. 만약 글자크기가 20px이다
+          //                //px은 모니터랑 모바일이랑 다르다? px는 절대 단위 em은 글자 크기에 따라 바뀐다.
+          // overflow: hidden;
+          // display: -webkit-box;
+          // //vendor -ms, -webkit, -moz
+          //  // line-clamp: 3;
+          // -webkit-line-clamp: 3; //line-clamp는 표준으로 설정되어 있지 않지만 구글과 사파리 계열에서는 적용이 된다.
+          // // -webkit-line-clamp와 lien-hight, height는 같이 유기적으로 써줘야함. 값이 다 연결돼있음
+          // // 즉, ex. line-height가 1.5고 -webkit-line-clamp 가 3이면 height는 4.5
+          // -webkit-box-orient: vertical;
+          // text-overflow: ellipsis;
+          // border: 1px solid #f00;
+
+        }
+      }
+    }
+ 
+    }
+  }
+
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url("../images/background.png");
+  .txt-box{
+    font-size: $h1*1.5;
+    font-weight: 900;
+    line-height: 1.5;
+    .rolling{
+      width: 450px;
+      height: 120px;
+      overflow:hidden;
+      display: inline-block;
+      text-align: center;
+      color: $main-color;
+      position: relative;
+      &:after{
+        content: "";
+        display: block;
+        width:100%;
+        height: 10px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  .more {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $h4;
+    font-weight: 700;
+    background-color: $main-color;
+    @include longShadow(40,darken($main-color,15));
+    overflow: hidden;
+    // text-shadow: 1px 1px 0px rgba(0,0,0,0.5), 2px 2px 0px rgba(0,0,0,0.5), 3px 3px 0px rgba(0,0,0,0.5)
+
+  }
+}
+
+
+
+
+.vertical {
+    padding-bottom: 300px;
+ .img {
+    border: 1px solid #f00;
+    vertical-align: bottom; //글자를 이미지의 어디에 맞출거냐 이 말임
+ }
+}
+
+
+
+
 }
 .title-box {
-    h2 {
-        font-size: $h1;
-        line-height: 1.25;
-        .mini {
-            color:$main-color;
-            display: block;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
+  h2 {
+    font-size: $h1;
+    line-height: 1.25;
+    .mini {
+      color: $main-color;
+      display: block;
+      font-size: 18px;
+      margin-bottom: 20px;
     }
-    p  {
-       font-size: $h3;
-    }
+  }
+  p {
+    font-size: $h3;
+  }
 }
 
-
-@keyframes brand-motion{
-    0%{
-        transform: translateX(0);
-
-
-    }
-    100% {
-        transfrom translateX();
-
-    }
-}
+// @keyframes brand-motion {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-50%);
+//   }
+// }

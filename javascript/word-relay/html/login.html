@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""> 
+        <!-- //서버랑 통신하려고 만든 태그. 서버에 아이디 패스워드 보낼테니까 서버야 니가 처리 해줘 ㅇㅇ
+        //아무것도 안쓰면 갈 데가 없으니까 새로고침을 하게 됨. 그래서 버튼을 누르면 새로고침이 됨. 그래서 액션에 서버주소를 적어주는건데 지금은 그냥 새로고침으로 처리 됨.  -->
+        <div>
+            <label><span>아이디</span><input type="text" class="user-id" name="userID" /></label>
+         </div> <!--/서버에서는 클래스는 전혀 신경쓰지 않고, name이 중요하다 -->
+        <div>
+            <label><span>비밀번호</span><input type="password" class="user-pw" name="userPw" /></label>
+        </div>
+        <div>
+            <button class="btn-login">로그인</button>
+            <!-- //form tag안에 버튼은 타입이  -->
+        </div>
+    </form>
+    <script>
+        const btnLogin = document.querySelector(".btn-login");
+        const userID = document.querySelector(".user-id");
+        const userPW = document.querySelector(".user-pw");
+        btnLogin.addEventListener("click", (e)=>{ //click하면 자동으로 호출되기 때문에 이름 없는 함수 사용 가능
+            // console.log(e);
+            e.preventDefault(); //함수는 매개변수 사용 가능.
+            if(userID.value==="jjang051" && userPw.value==="1234"){
+                alert("로그인 성공");
+                location.href="http://www.daum.net";
+            } 
+            // console.log("userID.value");
+            // console.log("userPw.value");
+            //console.log("click");
+        }); 
+        </script>
+</body>
+</html>
