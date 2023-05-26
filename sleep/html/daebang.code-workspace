@@ -1,0 +1,14 @@
+{
+  "folders": [
+	{
+		"path": "../../daebang"
+	},
+	{
+		"path": "../../hwenc"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "hwenc",
+    "liveServer.settings.port": 5501
+  }
+}
